@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -106,12 +107,20 @@ export default {
     title: 'Orders',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
+    submittedOrders: 'Submitted Orders',
     totalOrders: 'Total Orders',
     totalRevenue: 'Total Revenue',
     avgOrderValue: 'Avg Order Value',
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    submitted: {
+      empty: 'No restocking orders have been submitted yet.',
+      loadError: 'Failed to load submitted orders: {message}',
+      submittedDate: 'Submitted',
+      leadTime: 'Lead Time',
+      leadTimeDays: '{count} days'
+    },
     table: {
       orderNumber: 'Order Number',
       orderId: 'Order ID',
@@ -186,6 +195,44 @@ export default {
       trend: 'Trend',
       period: 'Period'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and get recommended purchase quantities based on forecasted demand and current stock',
+    loadError: 'Failed to load restocking data: {message}',
+    budget: {
+      title: 'Restocking Budget',
+      help: 'Items with the fastest growing demand are funded first.',
+      max: 'Full funding'
+    },
+    summary: {
+      budget: 'Budget',
+      spent: 'Estimated Spend',
+      remaining: 'Remaining',
+      leadTime: 'Order Lead Time'
+    },
+    recommended: 'Recommended Items',
+    table: {
+      sku: 'SKU',
+      itemName: 'Item Name',
+      trend: 'Trend',
+      quantity: 'Recommended Qty',
+      unitCost: 'Unit Cost',
+      lineCost: 'Line Cost',
+      leadTime: 'Lead Time'
+    },
+    days: '{count} days',
+    partial: 'Partial',
+    partialNote: 'Partially funded (funded / needed units): {items}',
+    unfundedNote: 'Not funded within this budget (needed units): {items}',
+    placeOrder: 'Place Order',
+    placingOrder: 'Placing order...',
+    orderPlaced: 'Order {orderNumber} submitted. Lead time: {days} days.',
+    orderFailed: 'Failed to place the order.',
+    noCandidates: 'No items need restocking. Current stock covers all forecasted demand.',
+    noRecommendations: 'The budget is too low to fund any items. Increase the budget to see recommendations.'
   },
 
   // Filters
